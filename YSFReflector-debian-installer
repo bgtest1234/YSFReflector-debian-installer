@@ -21,9 +21,9 @@ then
   exit 0
 fi
 DIRDIR=$(pwd)
-YSFREPO=https://github.com/g4klx/YSFClients.git
+YSFREPO=https://github.com/bgtest1234/YSFClientsbbb.git
 YSFDASHREPO=https://github.com/dg9vh/YSFReflector-Dashboard.git
-DEP="wget git build-essential apache2 php libapache2-mod-php php7.0-mbstring"
+DEP="wget git build-essential apache2 php libapache2-mod-php php7.3-mbstring"
 YSFINSTDIR=/root/reflector-install-files/ysfreflector
 YSFAPPDIR=/ysfreflector
 YSFDASDIR=/root/reflector-install-files/ysfdash
@@ -115,7 +115,7 @@ sed -i "s/apache.tbd/$YSFDOMAIN/g" /etc/apache2/sites-available/$YSFDOMAIN.conf
 sed -i "s/ysf-xlxd/ysf/g" /etc/apache2/sites-available/$YSFDOMAIN.conf
 chown -R www-data: $YSFWEBDIR
 a2ensite $YSFDOMAIN
-a2enmod php7.0
+a2enmod php7.3
 systemctl start ysfreflector
 systemctl restart apache2
 echo ""
