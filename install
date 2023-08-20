@@ -70,7 +70,7 @@ else
    echo "------------------------------------------------------------------------------"
    cd $YSFINSTDIR
    git clone $YSFREPO
-   cd $YSFINSTDIR/YSFClients/YSFReflectorbbb
+   cd $YSFINSTDIR/YSFClientsbbb/YSFReflector
    make clean all
 fi
 if [ -e $YSFINSTDIR/YSFClients/YSFReflector/YSFReflector ]
