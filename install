@@ -22,7 +22,7 @@ then
 fi
 DIRDIR=$(pwd)
 YSFREPO=https://github.com/bgtest1234/YSFClientsbbb.git
-YSFDASHREPO=https://github.com/dg9vh/YSFReflector-Dashboard.git
+YSFDASHREPO=https://github.com/dg9vh/YSFReflector-Dashboard.git  
 YSFINSTDIR=/root/reflector-install-files/ysfreflector
 YSFAPPDIR=/ysfreflector
 YSFDASDIR=/root/reflector-install-files/ysfdash
@@ -70,7 +70,7 @@ else
    echo "------------------------------------------------------------------------------"
    cd $YSFINSTDIR
    git clone $YSFREPO
-   cd $YSFINSTDIR/YSFClients/YSFReflector
+   cd $YSFINSTDIR/YSFClients/YSFReflectorbbb
    make clean all
 fi
 if [ -e $YSFINSTDIR/YSFClients/YSFReflector/YSFReflector ]
