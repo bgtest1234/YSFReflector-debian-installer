@@ -58,7 +58,7 @@ mkdir -p $YSFINSTDIR
 mkdir -p $YSFAPPDIR
 mkdir -p $YSFWEBDIR
 mkdir -p $YSFDASDIR
-if [ -e $YSFINSTDIR/YSFClients/YSFReflector/YSFReflector ]
+if [ -e $YSFINSTDIR/YSFClientsbbb/YSFReflector/YSFReflector ]
 then
    echo ""
    echo "It looks like you have already compiled YSFReflector. If you want to install it again, delete the directory '/root/YSFReflector-install-files' and run this script again. "
@@ -73,7 +73,7 @@ else
    cd $YSFINSTDIR/YSFClientsbbb/YSFReflector
    make clean all
 fi
-if [ -e $YSFINSTDIR/YSFClients/YSFReflector/YSFReflector ]
+if [ -e $YSFINSTDIR/YSFClientsbbb/YSFReflector/YSFReflector ]
 then
    echo ""
    echo "It looks like everything compiled successfully. There is a 'YSFReflector' application file. "
@@ -85,8 +85,8 @@ else
 fi
 echo ""
 echo "Copying files over to the executable directory...... "
-cp $YSFINSTDIR/YSFClients/YSFReflector/YSFReflector $YSFAPPDIR
-cp $YSFINSTDIR/YSFClients/YSFReflector/YSFReflector.ini $YSFAPPDIR
+cp $YSFINSTDIR/YSFClientsbbb/YSFReflector/YSFReflector $YSFAPPDIR
+cp $YSFINSTDIR/YSFClientsbbb/YSFReflector/YSFReflector.ini $YSFAPPDIR
 echo "Updating ini file in /YSFReflector...... "
 sed -i "s/16[ ]*characters[ ]*max/$YSFNAME/g" $YSFAPPDIR/YSFReflector.ini
 sed -i "s/14[ ]*characters[ ]*max/$YSFDESC/g" $YSFAPPDIR/YSFReflector.ini
